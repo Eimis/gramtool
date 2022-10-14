@@ -7,7 +7,7 @@ from gramtool.exceptions import UserSideError
 
 def get_grammar_tree(filename):
     with open(filename) as f:
-        grammar = yaml.load(f)
+        grammar = yaml.safe_load(f)
 
     names = set(chain.from_iterable(grammar['grammar'].values()))
     for name in names:
