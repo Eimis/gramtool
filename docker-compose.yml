@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  gramtool:
+    build: .
+    image: gramtool
+    container_name: gramtool
+    restart: always
+    command: sleep infinity
+    volumes:
+      - .:/code
+    tty: true
+    stdin_open: true
