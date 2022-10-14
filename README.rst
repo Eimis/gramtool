@@ -8,12 +8,16 @@ affixes and etc.
 Installing
 ==========
 
-``gramtool`` requires Python 3 version.
+``gramtool`` requires `Docker` and `docker-compose`
 
-On Ubuntu 14.04, 16.04::
+In your terminal, run::
 
-    $ sudo apt-get install python-dev libhunspell-dev
-    $ pip install gramtool
+    $ docker-compose up
+
+Then in a different terminal tab / window, run::
+
+    $ docker exec -it gramtool poetry run bash
+    $ ipython
 
 
 Using command line tool
